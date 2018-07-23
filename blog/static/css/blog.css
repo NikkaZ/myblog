@@ -1,9 +1,9 @@
 h1 a {
-    color: red;
+    color: green;
     font-family: 'Lobster';
 }
-h2 a {
-    color: green;
+h2 {
+    color: blue;
     font-family: 'Lobster';
 }
 body {
