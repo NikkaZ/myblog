@@ -1,17 +1,20 @@
 {% load static %}
 <html>
     <head>
-		<link rel="stylesheet" href="{% static 'css/blog.css' %}">
+		<link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
 		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+		<link rel="stylesheet" href="{% static 'css/blog.css' %}">
         <title>Nikka's blog</title>
     </head>
     <body>
-		<h1>Who is Nikka?</h1>
+		<div>
+		<h1><a href="https://www.linkedin.com/in/nikka-zanandrea/" class="external_link" id="link_to_wiki_page">Who is Nikka?</a></h1>
+		</div>
 		{% for post in posts %}
 			<div>
 				<p>published: {{ post.published_date }}</p>
-				<h2><a href="">{{ post.title }}</a></h2>
+				<h2>{{ post.title }}</h2>
 				<p>{{ post.text|linebreaksbr }}</p>
 				{% if post.upload %}
 					<p><img src="{{ post.upload.url }} " height="280" width="500"/></p>
