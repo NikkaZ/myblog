@@ -1,5 +1,9 @@
+{% load static %}
 <html>
     <head>
+		<link rel="stylesheet" href="{% static 'css/blog.css' %}">
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
         <title>Nikka's blog</title>
     </head>
     <body>
@@ -11,7 +15,6 @@
 				<p>{{ post.text|linebreaksbr }}</p>
 				{% if post.upload %}
 					<p><img src="{{ post.upload.url }} " height="280" width="500"/></p>
-					{{ post.upload.url }}
 				{% endif %}
 				<p>{{ post.email }}</p>
 				<br />
