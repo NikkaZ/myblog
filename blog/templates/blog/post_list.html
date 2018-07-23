@@ -3,19 +3,16 @@
         <title>Nikka's blog</title>
     </head>
     <body>
-	    <div>
-            <h1><a href="/">Who is Nikka?</a></h1>
-        </div>
-        <div>
-			<p>Find out some "stuff" about me</p>
-            <h2><a href="">Check it out</a></h2>
-            <p>Ben Nevis walk</p>
-        </div>
-        <div>
-            <p>published: 23.07.2018, 12:39</p>
-            <h2><a href="">Keep going</a></h2>
-            <p>Wow</p>
-        </div>
+		<h1>Who is Nikka?</h1>
+		{% for post in posts %}
+			<div>
+				<p>published: {{ post.published_date }}</p>
+				<h2><a href="">{{ post.title }}</a></h2>
+				<p>{{ post.text|linebreaksbr }}</p>
+				<br />
+				<br />
+			</div>
+		{% endfor %}
     </body>
 </html>
 
