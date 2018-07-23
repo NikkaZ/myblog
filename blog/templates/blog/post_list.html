@@ -9,6 +9,10 @@
 				<p>published: {{ post.published_date }}</p>
 				<h2><a href="">{{ post.title }}</a></h2>
 				<p>{{ post.text|linebreaksbr }}</p>
+				{% if post.upload %}
+					<p>{{ post.upload.url }}</p>
+				{% endif %}
+				<p>{{ post.email }}</p>
 				<br />
 				<br />
 			</div>
